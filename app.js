@@ -15,12 +15,7 @@ app.use(express.json());
 app.use('/public', express.static('public'));
 app.use("/", router);
 
-router.get('/images/seashore.png', (req, res) => {
-    const imagePath = path.join(import.meta.dirname, 'public/images/seashore.png');
-    res.sendFile(imagePath);
-  });
-  
-  
+
 
 router.get('/', (req, res) => {
   res.send('<center><br/><br/><h3>The app is at the <code>/send-email</code> and <code>/newsletter</code> routes</h3><img src="/images/seashore.png" alt="Seashore Mediclinic Logo" style="display: block; margin: 0 auto; max-width: 10%; height: auto;"></center>');
