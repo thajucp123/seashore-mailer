@@ -15,6 +15,14 @@
       "dest": "public/$1"
     },
     {
+      "src": "/send-email",
+      "dest": "app.js"
+    },
+    {
+      "src": "/newsletter",
+      "dest": "app.js"
+    },
+    {
       "src": "/(.*)",
       "dest": "app.js"
     }
