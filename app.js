@@ -10,14 +10,15 @@ dotenv.config(); //for environment variables
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public'));
+// Serve static files from the 'public' directory
+app.use('/public', express.static('public'));
 app.use("/", router);
 
 router.get('/', (req, res) => {
   res.send('<center><br/><br/><h3>The app is at the <code>/send-email</code> and <code>/newsletter</code> routes</h3><img src="/images/seashore.png" alt="Seashore Mediclinic Logo" style="display: block; margin: 0 auto; max-width: 10%; height: auto;"></center>');
 });
 
-//app.listen(3000, () => console.log("Server Running"));
+app.listen(3000, () => console.log("Server Running"));
 //console.log(process.env.EMAIL_USER);
 //console.log(process.env.EMAIL_PASS);
 
