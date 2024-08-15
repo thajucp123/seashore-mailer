@@ -3,28 +3,22 @@
   "build": {
     "target": "serverless"
   },
-  "builds": [
-    {
-      "src": "app.js",
-      "use": "@vercel/node"
-    }
-  ],
   "routes": [
     {
       "src": "/public/(.*)",
-      "dest": "public/$1"
+      "dest": "/public/$1"
     },
     {
       "src": "/send-email",
-      "dest": "app.js"
+      "dest": "/app.js"
     },
     {
       "src": "/newsletter",
-      "dest": "app.js"
+      "dest": "/app.js"
     },
     {
       "src": "/(.*)",
-      "dest": "app.js"
+      "dest": "/app.js"
     }
   ]
 }
