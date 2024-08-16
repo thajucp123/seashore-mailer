@@ -84,7 +84,7 @@ router.post("/send-email", (req, res) => {
     html: `
         <div style="font-family: Georgia, serif; font-size: 11pt; line-height: 1.6; color: #333; background-color: #f2f2f2; padding: 20px;">
         <div style="max-width: 600px; margin: 0 auto; background-color: white; padding: 20px; border: 1px solid #ddd; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.3);">
-         <img src="https://seashore-mailer.vercel.app/images/seashore.png" alt="Seashore Mediclinic Logo" style="display: block; margin: 0 auto; max-width: 20%; height: auto;">
+         <img src="https://seashore-mailer.vercel.app/images/seashore.png" alt="Seashore Mediclinic Logo" style="display: block; margin: 0 auto; max-width: 30%; height: auto;">
           <h3 style="color: #1eb2a6; margin: 3px auto; text-align: center;">New Contact Form Submission from <a href="https://www.seashoremediclinic.com/" target="_blank" style="color: #1eb2a6; text-decoration: underline;">Seashoremediclinic.com</a></h3>
           <p><strong>Name:</strong> <br/>${name}</p>
           <hr style="border: none; border-top: 2px solid #ccc;">
