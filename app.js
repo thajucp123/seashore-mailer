@@ -5,14 +5,19 @@ import nodemailer from "nodemailer";
 import process from 'process';
 import dotenv from 'dotenv';
 import path from 'path';
+import { fileURLToPath } from 'url';
 dotenv.config(); //for environment variables
 
 // server used to send send emails
 const app = express();
 app.use(cors());
 app.use(express.json());
-// Serve static files from the 'public' directory
-app.use('/public', express.static('public'));
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+// Serve static files from the "public" directory
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use("/", router);
 
 router.get('/public/images/seashore.png', (req, res) => {
@@ -25,10 +30,10 @@ router.get('/public/images/seashore.png', (req, res) => {
   
 
 router.get('/', (req, res) => {
-  res.send('<center><br/><br/><h3>The app is at the <code>/send-email</code> and <code>/newsletter</code> routes</h3><img src="public/images/seashore.png" alt="Seashore Mediclinic Logo" style="display: block; margin: 0 auto; max-width: 10%; height: auto;"></center>');
+  res.send('<center><br/><br/><h3>The app is at the <code>/send-email</code> and <code>/newsletter</code> routes</h3><img src="/images/seashore.png" alt="Seashore Mediclinic Logo" style="display: block; margin: 0 auto; max-width: 10%; height: auto;"></center>');
 });
 
-//app.listen(3000, () => console.log("Server Running"));
+app.listen(3000, () => console.log("Server Running"));
 //console.log(process.env.EMAIL_USER);
 //console.log(process.env.EMAIL_PASS);
 
