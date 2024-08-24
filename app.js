@@ -79,7 +79,7 @@ router.post("/send-email", (req, res) => {
  
   const mail = {
     from: process.env.EMAIL_USER,
-    to: "td.cd.pd@gmail.com",
+    to: "seashoremediclinic@gmail.com",
     subject: "Contact Form Submission - Seashore Mediclinic",
     html: `
         <div style="font-family: Georgia, serif; font-size: 11pt; line-height: 1.6; color: #333; background-color: #f2f2f2; padding: 20px;">
@@ -123,7 +123,7 @@ router.post("/newsletter", (req, res) => {
    
     const mail = {
       from: process.env.EMAIL_USER,
-      to: "td.cd.pd@gmail.com",
+      to: "seashoremediclinic@gmail.com",
       subject: "Newsletter Submission - Seashore Mediclinic",
       html: `
           <div style="font-family: Georgia, serif; font-size: 11pt; line-height: 1.6; color: #333; background-color: #f2f2f2; padding: 20px;">
